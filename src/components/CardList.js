@@ -30,14 +30,19 @@ const CardList = () => {
     <Container
       fluid
       className="py-4"
-      style={{ backgroundColor: "#6C4675", textAlign: "left" }}
+      style={{
+        backgroundColor: "#6C4675",
+        textAlign: "left",
+        marginTop: "20px",
+        padding: "60px",
+      }}
     >
-      <Row className="justify-content-center mb-3">
+      <Row className="justify-content-left mb-3">
         <Col xs={12} md={10}>
           <h4
             style={{
               fontWeight: "bold",
-              fontSize: isMobile ? "1.5rem" : isTablet ? "2rem" : "2.5rem",
+              fontSize: isMobile ? "1.5rem" : isTablet ? "2rem" : "2rem",
               color: "white",
             }}
           >
@@ -55,9 +60,9 @@ const CardList = () => {
           paddingBottom: "20px",
         }}
       >
-        {cardData.map((card, index) => (
+        {cardData.map((card, i) => (
           <Col
-            key={index}
+            key={i}
             xs={10}
             sm={6}
             md={4}
